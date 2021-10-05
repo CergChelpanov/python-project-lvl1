@@ -1,5 +1,7 @@
+#!/usr/bin/python3
+text = 'Welcome to the Brain Games!'
 def main(text):
     print(format(text))
 
-main('Welcome to the Brain Games!')
+main(text)
 

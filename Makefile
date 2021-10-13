@@ -2,6 +2,7 @@
 
 install: # установить зависимости
 	poetry install
+	poetry add prompt
 
 build:
 	poetry build

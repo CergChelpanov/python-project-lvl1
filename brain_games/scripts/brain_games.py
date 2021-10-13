@@ -1,7 +1,15 @@
 #!/usr/bin/env python
-text = 'Welcome to the Brain Games!'
-def main(text):
-    print(format(text))
 
-main(text)
+import prompt
+
+
+def main():
+
+    print('Welcome to the Brain Games!')
+
+main()
+
+name = prompt.string('May I have your name? ')
+
+print('Hello,', name)
 

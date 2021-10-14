@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["CergChelpanov <chelpanov960@gmail.com>"]
 packages = [
-        { include = "brain_games" },
+        { include = "brain_games" } 
 ]
 
 

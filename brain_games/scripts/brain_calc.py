@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # file brain_calc.py
+
+# BEGIN
+
 import random
 
 # Приветствие
@@ -33,7 +36,15 @@ while iteration <= max_limit:
     if int(true_result) - int(result_player) == 0:
         iteration = iteration + 1
         print('Correct!')
+        if iteration == max_limit + 1:
+            print("Congratulations,",name_player,"!")
     else:
         iteration = max_limit + 1
         print("'",result_player,"' is wrong answer. Correct answer was '", true_result,"'\nLet's try again,",name_player,"!")
 
+def main():
+
+    if __name__ == '__main__':
+        main()
+
+# END

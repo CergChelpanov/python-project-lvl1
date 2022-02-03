@@ -13,9 +13,9 @@ publish:
 package-install:
 	python3 -m pip install --user dist/*.whl --force-reinstall
 
-init: #подключить линтер flake8
+make init: #подключить линтер flake8
 	poetry run flake8 brain_games
 
-start: #запустить приложение
+brain-games: #запустить приложение
 	poetry run brain-games
 

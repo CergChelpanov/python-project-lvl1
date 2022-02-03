@@ -1,1 +1,9 @@
 .venv
+brain_games/__pycache__/cli.cpython-38.pyc
+brain_games/__pycache__/even.cpython-38.pyc
+brain_games/games/__pycache__/even.cpython-38.pyc
+brain_games/scripts/__pycache__/brain_calc.cpython-38.pyc
+brain_games/scripts/__pycache__/brain_even.cpython-38.pyc
+brain_games/scripts/__pycache__/brain_games.cpython-38.pyc
+brain_games/games/__pycache__/calc.cpython-38.pyc
+

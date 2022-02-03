@@ -1,57 +1,65 @@
 #!/usr/bin/env python
-# file brain_progression.py
+# file <brain_progression>
 
 # BEGIN
 
+from brain_games.games.progression import (
+    complete_the_game, complete_the_task, what_to_do)
+import prompt
 import random
 
-# Приветствие
-print("Welcome to the Brain Games!")
-name_player = input('May I have your name?')
-print("Hello,",name_player,"!")
+first_element = random.randrange(1, 50, 1)
+delta = abs(random.randrange(1, 5, 1))
+long_progression = 5 + random.randrange(1, 5, 1)
+joker = random.randrange(1, int(long_progression), 1)
+next_element = first_element
+correct_answer = 2
+answer = 1
+wrong_answer = 2
+name = ''
+the_task = ''
 
-# Повторы заданий
 
-iteration = 1
-max_limit = 3
-while iteration <= max_limit:
-
-# Начальные условия
-    print("What number is missing in the progression?")
-    first_element = random.randrange(1,50,1)
-    delta = abs(random.randrange(1,5,1))
-    long_progression = 5 + random.randrange(1,5,1)
-    joker = random.randrange(1,int(long_progression),1)
-
-# Вычисление элементов арифметической прогрессии
-    next_element = first_element
-    next_step = 1
-    output_progression = str()
-    while next_step <= long_progression:
-        if next_step == joker:
-            true_result = next_element
-            output_progression = output_progression + ', ..'
+def question(the_task, answer, correct_answer):
+    print('Welcome to the Brain Games!')
+    name = prompt.string('May I have your name? ')
+    print('Hello, {}!'.format(name))
+    what_to_do()
+    i = 3
+    while i > 0:
+        first_element = random.randrange(1, 50, 1)
+        delta = abs(random.randrange(1, 5, 1))
+        long_progression = 5 + random.randrange(1, 5, 1)
+        joker = random.randrange(1, int(long_progression), 1)
+        correct_answer = complete_the_game(
+            first_element, delta, long_progression, joker)
+        i = i - 1
+        print('Question:', complete_the_task(
+            first_element, delta, long_progression, joker))
+        answer = prompt.string('Your answer: ')
+        if str(answer) != str(correct_answer):
+            wrong_answer(answer, correct_answer)
+            quit()
         else:
-            output_progression = output_progression + ', ' + str(next_element)
-        next_element = next_element + delta
-        next_step = next_step + 1
-    print('Question:',output_progression)
-    result_player = input('Your answer:')
+            true_answer()
+    print(f'Congratulations, {name}!')
 
-#Результаты
-    if int(true_result) - int(result_player) == 0:
-        iteration = iteration + 1
-        print('Correct!')
-        if iteration == max_limit + 1:
-            print("Congratulations,",name_player,"!")
-    else:
-        iteration = max_limit + 1
-        print("'",result_player,"' is wrong answer. Correct answer was '", true_result,"'\nLet's try again,",name_player,"!")
+
+def wrong_answer(wrong_answer, correct_answer):
+    print("'{}' is wrong answer ;(. Correct answer was'{}'.".format(
+        wrong_answer, correct_answer))
+
+
+def true_answer():
+    print('Correct!')
+
 
 def main():
+    question(the_task, answer, correct_answer)
 
-    if __name__ == '__main__':
-        main()
+
+if __name__ == '__main__':
+    main()
+
 
 # END
-

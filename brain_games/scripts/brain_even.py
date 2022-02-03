@@ -3,7 +3,7 @@
 
 # BEGIN
 
-from brain_games.games.even import complete_the_game, complete_the_task
+from brain_games.games.even import complete_the_game, complete_the_task, what_to_do
 import prompt
 import random
 
@@ -19,6 +19,7 @@ def question(the_task, answer, correct_answer):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print('Hello, {}!'.format(name))
+    what_to_do()
     i = 3
     while i > 0:
         number = int(abs(random.randint(1, 1000)))

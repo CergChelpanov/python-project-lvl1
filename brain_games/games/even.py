@@ -9,6 +9,10 @@ the_task = 'no worked'
 correct_answer = 'not moved'
 
 
+def what_to_do():
+    print('Answer "yes" if the number is even, otherwise answer "no".')
+
+
 def complete_the_task(number):
     the_task = str(number)
     return the_task

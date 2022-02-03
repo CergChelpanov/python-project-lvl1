@@ -1,50 +1,57 @@
 #!/usr/bin/env python
-# file brain_calc.py
+# file <brain_calc>
 
 # BEGIN
 
+from brain_games.games.calc import (
+    complete_the_game, complete_the_task, what_to_do)
+import prompt
 import random
 
-# Приветствие
-print("Welcome to the Brain Games!")
-name_player = input('May I have your name?')
-print("Hello,",name_player,"!")
+correct_answer = 2
+answer = 1
+wrong_answer = 2
+name = ''
+the_task = ''
 
-# Повторы заданий
 
-iteration = 1
-max_limit = 3
-while iteration <= max_limit:
+def question(the_task, answer, correct_answer):
+    print('Welcome to the Brain Games!')
+    name = prompt.string('May I have your name? ')
+    print('Hello, {}!'.format(name))
+    what_to_do()
+    i = 3
+    while i > 0:
+        x = random.randrange(1, 100, 1)
+        y = random.randrange(1, 100, 1)
+        arifmetic = random.randrange(1, 4, 1)
+        correct_answer = complete_the_game(x, y, arifmetic)
+        i = i - 1
+        print('Question:', complete_the_task(x, y, arifmetic))
+        answer = prompt.string('Your answer: ')
+        if str(answer) != str(correct_answer):
+            wrong_answer(answer, correct_answer)
+            quit()
+        else:
+            true_answer()
+    print(f'Congratulations, {name}!')
 
-# Задание
-    print("What is the result of the expression?")
-    x = random.randrange(1,100,1)
-    y = random.randrange(1,100,1)
-    arifmetic = random.randrange(1,4,1)
-    if arifmetic == 1:
-        true_result = x + y
-        print("Question:",x,"+",y)
-    if arifmetic == 2:
-        true_result = x - y
-        print("Question:",x,"-",y)
-    if arifmetic == 3:
-        true_result = x * y
-        print("Question:",x,"*",y)
-    result_player = input('Your answer:')
 
-#Результаты
-    if int(true_result) - int(result_player) == 0:
-        iteration = iteration + 1
-        print('Correct!')
-        if iteration == max_limit + 1:
-            print("Congratulations,",name_player,"!")
-    else:
-        iteration = max_limit + 1
-        print("'",result_player,"' is wrong answer. Correct answer was '", true_result,"'\nLet's try again,",name_player,"!")
+def wrong_answer(wrong_answer, correct_answer):
+    print("'{}' is wrong answer ;(. Correct answer was'{}'.".format(
+        wrong_answer, correct_answer))
+
+
+def true_answer():
+    print('Correct!')
+
 
 def main():
+    question(the_task, answer, correct_answer)
 
-    if __name__ == '__main__':
-        main()
+
+if __name__ == '__main__':
+    main()
+
 
 # END

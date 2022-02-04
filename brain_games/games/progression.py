@@ -20,7 +20,7 @@ def what_to_do():
 def complete_the_task(first_element, delta, long_progression, joker):
     next_element = first_element
     next_step = 1
-    the_task = str()
+    the_task = ''
     while next_step <= long_progression:
         if next_step == joker:
             the_task = the_task + ' ..'
@@ -28,7 +28,7 @@ def complete_the_task(first_element, delta, long_progression, joker):
             the_task = the_task + ' ' + str(next_element)
         next_element = next_element + delta
         next_step = next_step + 1
-    return the_task
+    return the_task.strip()
 
 
 def complete_the_game(first_element, delta, long_progression, joker):

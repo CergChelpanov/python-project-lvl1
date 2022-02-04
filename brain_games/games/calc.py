@@ -17,13 +17,13 @@ def what_to_do():
 
 def complete_the_task(x, y, arifmetic):
     if arifmetic == 1:
-        the_task = str(x) + '+' + str(y)
+        the_task = str(x) + ' + ' + str(y)
         return the_task
     if arifmetic == 2:
-        the_task = str(x) + '-' + str(y)
+        the_task = str(x) + ' - ' + str(y)
         return the_task
     if arifmetic == 3:
-        the_task = str(x) + '*' + str(y)
+        the_task = str(x) + ' * ' + str(y)
         return the_task
 
 

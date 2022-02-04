@@ -3,7 +3,8 @@
 
 # BEGIN
 
-from brain_games.games.even import complete_the_game, complete_the_task, what_to_do
+from brain_games.games.even import (
+    complete_the_game, complete_the_task, what_to_do)
 import prompt
 import random
 

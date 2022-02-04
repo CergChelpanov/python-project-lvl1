@@ -1,52 +1,55 @@
 #!/usr/bin/env python
-# file brain_prime.py
+# file <brain_prime>
 
 # BEGIN
 
+from brain_games.games.prime import (
+    complete_the_game, complete_the_task, what_to_do)
+import prompt
 import random
 
-# Приветствие
-print("Welcome to the Brain Games!")
-name_player = input('May I have your name?')
-print("Hello,",name_player,"!")
+correct_answer = 2
+answer = 1
+wrong_answer = 2
+name = ''
+the_task = ''
+number = int(abs(random.randrange(3, 100, 1)))
 
-# Повторы заданий
 
-iteration = 1
-max_limit = 3
-while iteration <= max_limit:
+def question(the_task, answer, correct_answer):
+    print('Welcome to the Brain Games!')
+    name = prompt.string('May I have your name? ')
+    print('Hello, {}!'.format(name))
+    what_to_do()
+    i = 3
+    while i > 0:
+        number = int(abs(random.randrange(3, 100, 1)))
+        correct_answer = complete_the_game(number)
+        i = i - 1
+        print('Question:', complete_the_task(number))
+        answer = prompt.string('Your answer: ')
+        if str(answer) != str(correct_answer):
+            wrong_answer(answer, correct_answer)
+            quit()
+        else:
+            true_answer()
+    print(f'Congratulations, {name}!')
 
-# Начальные условия
-    print('Answer "yes" if given number is prime. Otherwise "no".')
-    given_number = abs(random.randrange(3,100,1))
 
-# Определение простое число или нет
-    divider = 2
-    next_step = 1
-    true_result = str('yes')
+def wrong_answer(wrong_answer, correct_answer):
+    print("'{}' is wrong answer ;(. Correct answer was'{}'.".format(
+        wrong_answer, correct_answer))
 
-    if given_number % divider == 0:
-        true_result = str('no')
 
-    elif divider < given_number:
-        divider = divider + next_step
+def true_answer():
+    print('Correct!')
 
-    
-    print('Question:',given_number)
-    result_player = input('Your answer:')
-
-#Результаты
-    if str(true_result) == str(result_player):
-        iteration = iteration + 1
-        print('Correct!')
-        if iteration == max_limit + 1:
-            print("Congratulations,",name_player,"!")
-    else:
-        iteration = max_limit + 1
-        print("'",str(result_player),"' is wrong answer. Correct answer was '", str(true_result),"'\nLet's try again,",name_player,"!")
 
 def main():
+    question(the_task, answer, correct_answer)
 
-    if __name__ == '__main__':
-        main()
+
+if __name__ == '__main__':
+    main()
+
 # END

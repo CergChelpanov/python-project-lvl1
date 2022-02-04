@@ -5,16 +5,16 @@
 
 
 brain-even:
-https://asciinema.org/a/oloS1qyFdp9ZE3Z89KkR7iQ3m
+ <a href="https://asciinema.org/a/oloS1qyFdp9ZE3Z89KkR7iQ3m" target="_blank">
 
 brain-calc:
-https://asciinema.org/a/hQVvMrHgDuihbOv9LkfGLvMwK
+ <a href="https://asciinema.org/a/hQVvMrHgDuihbOv9LkfGLvMwK" target="_blank">
 
 brain-gcd:
-https://asciinema.org/a/Kt0HkQ3wy4hExnZgQ7CDNVv7d
+<a href="https://asciinema.org/a/Kt0HkQ3wy4hExnZgQ7CDNVv7d" target="_blank">
 
 brain-progression:
-https://asciinema.org/a/fjp2ak42E33Z2vSaIqg438fWY
+<a href="https://asciinema.org/a/fjp2ak42E33Z2vSaIqg438fWY" target="_blank">
 
 brain-prime:
-https://asciinema.org/a/1LjQcjolGfZDCxcoN7GhrmilG
+<a href="https://asciinema.org/a/1LjQcjolGfZDCxcoN7GhrmilG" target="_blank">

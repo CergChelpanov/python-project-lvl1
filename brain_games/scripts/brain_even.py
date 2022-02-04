@@ -29,6 +29,7 @@ def question(the_task, answer, correct_answer):
         answer = prompt.string('Your answer: ')
         if str(answer) != str(correct_answer):
             wrong_answer(answer, correct_answer)
+            print("Let's try again, {}!".format(name))
             quit()
         else:
             true_answer()

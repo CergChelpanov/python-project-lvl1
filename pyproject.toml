@@ -6,7 +6,10 @@ authors = ["CergChelpanov <chelpanov960@gmail.com>"]
 packages = [
         { include = "brain_games" } 
 ]
-
+repository = "https://github.com/CergChelpanov/python-project-lvl1"
+classifiers = [
+    'Programming Language :: Python :: 3'
+]
 
 [tool.poetry.dependencies]
 python = "^3.8.10"

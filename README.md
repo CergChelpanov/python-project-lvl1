@@ -11,6 +11,8 @@
 5. If your answer is not correct you will see the message about wrong answer and game over
 6. We wish you good luck! ;)
 
+Как установить этот проект как пакет? Я представления не имею об этом. Наверно с качать с гитхаба.
+
 1. $  brain-even
 2. $  brain-calc
 3. $  brain-gcd

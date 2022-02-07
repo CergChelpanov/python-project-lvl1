@@ -3,6 +3,23 @@
 
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 
+
+1. There are 5 games special for your brain. 
+2. Choose which one do you want to play (even, calc, prime, gcd or progression) and run command.
+3. After running you should read the question and write in console right answer.
+4. Each game has 3 rounds. If your answer is correct you will see "Correct!" and than next question.
+5. If your answer is not correct you will see the message about wrong answer and game over
+6. We wish you good luck! ;)
+
+1. $  brain-even
+2. $  brain-calc
+3. $  brain-gcd
+4. $  brain-progression
+5. $  brain-prime
+
+
+
+
 аксинемы:
 
 rain-even:

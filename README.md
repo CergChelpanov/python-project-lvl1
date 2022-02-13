@@ -1,7 +1,8 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/CergChelpanov/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/CergChelpanov/python-project-lvl1/actions)
 
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
+
+<a href="https://codeclimate.com/github/CergChelpanov/python-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/a0d627cfb94a5ceec4be/maintainability" /></a>
 
 
 1. There are 5 games special for your brain. 
@@ -11,7 +12,7 @@
 5. If your answer is not correct you will see the message about wrong answer and game over
 6. We wish you good luck! ;)
 
-Как установить этот проект как пакет? Я представления не имею об этом. Наверно с качать с гитхаба.
+______
 
 1. $  brain-even
 2. $  brain-calc

@@ -9,6 +9,8 @@ packages = [
 repository = "https://github.com/CergChelpanov/python-project-lvl1"
 classifiers = [
     'Programming Language :: Python :: 3'
+    'Topic :: Games/Entertaiment :: Puzzle Games'
+    'Environment :: Console'
 ]
 
 [tool.poetry.dependencies]

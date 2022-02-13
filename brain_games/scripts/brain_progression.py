@@ -4,9 +4,7 @@
 # BEGIN
 
 from brain_games.games import progression
-from brain_games.games.mover import mover, REPEAT
-import prompt
-import random
+from brain_games.games.mover import mover
 
 
 def main():

@@ -11,7 +11,7 @@ STEP = 1
 
 
 def complete_the_game():
-    number = randint(START, STOP)
+    number = randint(START + 1, STOP)
     x = randrange(START, number, STEP)
     y = randrange(START, number, STEP)
     the_task = str(x) + ' ' + str(y)

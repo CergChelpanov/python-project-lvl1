@@ -12,7 +12,7 @@ STEP = 1
 
 
 def complete_the_game():
-    number = randint(START, STOP2)
+    number = randint(START + 1, STOP2)
     x = randrange(START, number, STEP)
     y = randrange(START, number, STEP)
     arifmetic = randrange(START, STOP1, STEP)

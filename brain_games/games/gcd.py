@@ -27,6 +27,7 @@ def complete_the_game():
         while divisible % correct_answer > 0 or divider % correct_answer > 0:
             correct_answer = correct_answer - 1
         return correct_answer
+
     correct_answer = gcd(x, y)
     return the_task, correct_answer
 

@@ -28,7 +28,7 @@ def complete_the_game():
     delta = abs(randrange(START, STOP1, STEP))
     progression = create_progression(first_num, number_of_elements, delta)
     long_progression = 5 + randrange(START, STOP1, STEP)
-    joker = randrange(START, int(long_progression), STEP)
+    joker = randrange(START + 1, int(long_progression), STEP)
     miss_num = progression[joker]
     correct_answer = str(miss_num)
     the_task = go_to_string_progression(progression, joker)

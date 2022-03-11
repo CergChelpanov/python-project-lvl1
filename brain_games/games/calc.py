@@ -10,6 +10,7 @@ STOP1 = 4
 STOP2 = 100
 STEP = 1
 
+
 def complete_the_game():
     number = randint(START, STOP2)
     x = randrange(START, number, STEP)

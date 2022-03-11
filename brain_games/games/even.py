@@ -1,14 +1,20 @@
-#!/usr/bin/env python
 # file <even>
 
 # BEGIN
 
-WHAT_TO_GO = 'Answer "yes" if the number is even, otherwise answer "no".'
+from random import randint
+RULES_OF_THE_GAME = 'Answer "yes" if the number is even, otherwise answer "no".'
+START = 1
+STOP = 100
 
 
-def complete_the_game(number):
+def complete_the_game():
+    number = randint(START, STOP)
     the_task = str(number)
-    if int(number) % 2 == 0:
+
+    def is_even(number):
+        return number % 2 == 0
+    if is_even(number) is True:
         correct_answer = 'yes'
         return the_task, correct_answer
     else:

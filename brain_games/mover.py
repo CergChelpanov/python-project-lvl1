@@ -1,10 +1,8 @@
-#!/usr/bin/env python
 # file <mover>
 
 # BEGIN
 
 import prompt
-import random
 
 REPEAT = 3
 
@@ -13,12 +11,11 @@ def mover(game):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print('Hello, {}!'.format(name))
-    print(game.WHAT_TO_GO)
+    print(game.RULES_OF_THE_GAME)
     i = REPEAT
     while i > 0:
-        number = int(abs(random.randint(1, 100)))
         i = i - 1
-        the_task, correct_answer = game.complete_the_game(number)
+        the_task, correct_answer = game.complete_the_game()
         print('Question:', the_task)
         answer = prompt.string('Your answer: ')
         if str(answer) != str(correct_answer):

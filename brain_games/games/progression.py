@@ -1,35 +1,37 @@
-#!/usr/bin/env python
 # file <progression>
 
 # BEGIN
 
-import random
+from random import randrange, randint
 
-WHAT_TO_GO = 'What number is missing in the progression?'
+RULES_OF_THE_GAME = 'What number is missing in the progression?'
+START = 1
+STOP1 = 5
+STOP2 = 100
+STOP3 = 10
+STEP = 1
 
 
-def complete_the_game(number):
-    first_element = random.randrange(1, number, 1)
-    delta = abs(random.randrange(1, 5, 1))
-    long_progression = 5 + random.randrange(1, 5, 1)
-    joker = random.randrange(1, int(long_progression), 1)
-    next_element = first_element
-    next_step = 1
-    the_task = ''
-    while next_step <= long_progression:
-        if next_step == joker:
-            the_task = the_task + ' ..'
-        else:
-            the_task = the_task + ' ' + str(next_element)
-        next_element = next_element + delta
-        next_step = next_step + 1
-    next_element = first_element
-    next_step = 1
-    while next_step <= long_progression:
-        next_element = next_element + delta
-        if next_step == joker:
-            correct_answer = next_element - delta
-        next_step = next_step + 1
+def create_progression(first_num, number_of_elements, delta):
+    return [x for x in range(first_num,
+            first_num + number_of_elements * delta, delta)]
+
+
+def go_to_string_progression(progression, indicator):
+    return ' '.join([str(progression[x]) if x != indicator else '..'
+                    for x in range(len(progression))])
+
+
+def complete_the_game():
+    number_of_elements = 5 + randint(START, STOP3)
+    first_num = randrange(START, number_of_elements, STEP)
+    delta = abs(randrange(START, STOP1, STEP))
+    progression = create_progression(first_num, number_of_elements, delta)
+    long_progression = 5 + randrange(START, STOP1, STEP)
+    joker = randrange(START, int(long_progression), STEP)
+    miss_num = progression[joker]
+    correct_answer = str(miss_num)
+    the_task = go_to_string_progression(progression, joker)
     return the_task.strip(), correct_answer
 
 # END

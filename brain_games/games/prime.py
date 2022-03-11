@@ -1,24 +1,35 @@
-#!/usr/bin/env python
 # file <prime>
 
 # BEGIN
 
-import random
+from random import randrange
 
-WHAT_TO_GO = 'Answer "yes" if given number is prime. Otherwise "no".'
+RULES_OF_THE_GAME = 'Answer "yes" if given number is prime. Otherwise "no".'
+START = 3
+STOP = 100
+STEP = 1
 
 
-def complete_the_game(number):
-    number = int(abs(random.randrange(3, 100, 1)))
-    the_task = str(number)
+def is_prime(number):
     divider = 2
-    correct_answer = 'yes'
-    while divider <= (number / 2):
+    if number < 2:
+        return False
+    while divider <= number / 2:
         if number % divider == 0:
-            correct_answer = str('no')
-            return the_task, correct_answer
-        elif divider < number:
-            divider = divider + 1
+            return False
+        divider = divider + 1
+    return True
+
+
+def complete_the_game():
+    number = randrange(START, STOP, STEP)
+    the_task = str(number)
+    correct_answer = 'yes'
+    if is_prime(number) is True:
+        correct_answer = str('yes')
+        return the_task, correct_answer
+    else:
+        correct_answer = 'no'
     return the_task, correct_answer
 
 # END

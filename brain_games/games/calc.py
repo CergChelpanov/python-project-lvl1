@@ -1,18 +1,20 @@
-#!/usr/bin/env python
 # file <calc>
 
 # BEGIN
 
-import random
+from random import randint, randrange
 
-WHAT_TO_GO = 'What is the result of the expression?'
+RULES_OF_THE_GAME = 'What is the result of the expression?'
+START = 1
+STOP1 = 4
+STOP2 = 100
+STEP = 1
 
-
-def complete_the_game(number):
-    number = int(abs(random.randint(1, 100)))
-    x = random.randrange(1, number, 1)
-    y = random.randrange(1, number, 1)
-    arifmetic = random.randrange(1, 4, 1)
+def complete_the_game():
+    number = randint(START, STOP2)
+    x = randrange(START, number, STEP)
+    y = randrange(START, number, STEP)
+    arifmetic = randrange(START, STOP1, STEP)
     if arifmetic == 1:
         the_task = str(x) + ' + ' + str(y)
         correct_answer = str(x + y)

@@ -4,7 +4,7 @@
 # BEGIN
 
 from brain_games.games import calc
-from brain_games.games.mover import mover
+from brain_games.mover import mover
 
 
 def main():

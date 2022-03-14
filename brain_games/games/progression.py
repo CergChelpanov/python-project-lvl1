@@ -16,8 +16,8 @@ def create_progression(initial_term, number_of_elements, difference):
             initial_term + number_of_elements * difference, difference)]
 
 
-def go_to_string_progression(progression, indicator):
-    return ' '.join([str(progression[x]) if x != indicator else '..'
+def stringify_progression(progression, hidden_element_index):
+    return ' '.join([str(progression[x]) if x != hidden_element_index else '..'
                     for x in range(len(progression))])
 
 
@@ -31,7 +31,7 @@ def game_game():
     joker = randrange(LOWER_BOUND + 1, int(long_progression), STEP)
     miss_num = progression[joker]
     correct_answer = str(miss_num)
-    the_task = go_to_string_progression(progression, joker)
+    the_task = stringify_progression(progression, joker)
     return the_task.strip(), correct_answer
 
 # END

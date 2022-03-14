@@ -27,7 +27,6 @@ def game_game():
     x = randrange(LOWER_BOUND, number, STEP)
     y = randrange(LOWER_BOUND, number, STEP)
     the_task = str(x) + ' ' + str(y)
-    correct_answer = 1
     correct_answer = gcd(x, y)
     return the_task, correct_answer
 

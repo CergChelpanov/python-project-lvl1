@@ -11,14 +11,21 @@ STEP = 1
 
 
 def gcd(x, y):
-    divisible = abs(y)
-    divider = abs(x)
-    if abs(x) / abs(y) >= 1:
-        divisible = abs(x)
-        divider = abs(y)
-    correct_answer = divider
-    while divisible % correct_answer > 0 or divider % correct_answer > 0:
-        correct_answer = correct_answer - 1
+    #    divisible = abs(y)
+    #    divider = abs(x)
+    #    if abs(x) / abs(y) >= 1:
+    #        divisible = abs(x)
+    #        divider = abs(y)
+    #    correct_answer = divider
+    #    while divisible % correct_answer > 0 or divider % correct_answer > 0:
+    #        correct_answer = correct_answer - 1
+    # Наставник желает видеть решение алгоритмом Евклида:
+    while x != 0 and y != 0:
+        if x > y:
+            x = x % y
+        else:
+            y = y % x
+    correct_answer = x + y
     return correct_answer
 
 

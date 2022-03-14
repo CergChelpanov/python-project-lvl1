@@ -27,8 +27,7 @@ def game_game():
     difference = abs(randrange(LOWER_BOUND, UPPER_BOUND_DIFF, STEP))
     progression = create_progression(initial_term, number_of_elements,
                                      difference)
-    long_progression = 5 + randrange(LOWER_BOUND, UPPER_BOUND_DIFF, STEP)
-    joker = randrange(LOWER_BOUND + 1, int(long_progression), STEP)
+    joker = randrange(LOWER_BOUND + 1, len(progression), STEP)
     miss_num = progression[joker]
     correct_answer = str(miss_num)
     the_task = stringify_progression(progression, joker)

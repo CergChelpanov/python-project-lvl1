@@ -4,11 +4,11 @@
 # BEGIN
 
 from brain_games.games import gcd
-from brain_games.mover import mover
+from brain_games.engine import run
 
 
 def main():
-    mover(gcd)
+    run(gcd)
 
 
 if __name__ == '__main__':

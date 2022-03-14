@@ -4,11 +4,11 @@
 # BEGIN
 
 from brain_games.games import progression
-from brain_games.mover import mover
+from brain_games.engine import run
 
 
 def main():
-    mover(progression)
+    run(progression)
 
 
 if __name__ == '__main__':

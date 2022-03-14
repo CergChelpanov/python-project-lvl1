@@ -1,4 +1,4 @@
-# file <mover>
+# file <engine>
 
 # BEGIN
 
@@ -7,7 +7,7 @@ import prompt
 REPEAT = 3
 
 
-def mover(game):
+def run(game):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print('Hello, {}!'.format(name))

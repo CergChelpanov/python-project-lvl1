@@ -4,8 +4,8 @@
 
 from random import randint
 RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
-START = 1
-STOP = 100
+LOWER_BOUND = 1
+UPPER_BOUND_NUM = 100
 
 
 def is_even(number):
@@ -13,7 +13,7 @@ def is_even(number):
 
 
 def complete_the_game():
-    number = randint(START, STOP)
+    number = randint(LOWER_BOUND, UPPER_BOUND_NUM)
     the_task = str(number)
     if is_even(number) is True:
         correct_answer = 'yes'

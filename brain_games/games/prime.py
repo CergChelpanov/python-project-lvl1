@@ -5,8 +5,8 @@
 from random import randrange
 
 RULES = 'Answer "yes" if given number is prime. Otherwise "no".'
-START = 3
-STOP = 100
+LOWER_BOUND = 3
+UPPER_BOUND_NUM = 100
 STEP = 1
 
 
@@ -22,7 +22,7 @@ def is_prime(number):
 
 
 def complete_the_game():
-    number = randrange(START, STOP, STEP)
+    number = randrange(LOWER_BOUND, UPPER_BOUND_NUM, STEP)
     the_task = str(number)
     correct_answer = 'yes'
     if is_prime(number) is True:

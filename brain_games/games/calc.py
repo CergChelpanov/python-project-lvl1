@@ -5,17 +5,17 @@
 from random import randint, randrange
 
 RULES = 'What is the result of the expression?'
-START = 1
-STOP1 = 4
-STOP2 = 100
+LOWER_BOUND = 1
+UPPER_BOUND_ARIPH = 4
+UPPER_BOUND_NUM = 100
 STEP = 1
 
 
 def complete_the_game():
-    number = randint(START + 1, STOP2)
-    x = randrange(START, number, STEP)
-    y = randrange(START, number, STEP)
-    arifmetic = randrange(START, STOP1, STEP)
+    number = randint(LOWER_BOUND + 1, UPPER_BOUND_NUM)
+    x = randrange(LOWER_BOUND, number, STEP)
+    y = randrange(LOWER_BOUND, number, STEP)
+    arifmetic = randrange(LOWER_BOUND, UPPER_BOUND_ARIPH, STEP)
     if arifmetic == 1:
         the_task = str(x) + ' + ' + str(y)
         correct_answer = str(x + y)

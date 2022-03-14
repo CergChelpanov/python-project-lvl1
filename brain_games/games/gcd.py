@@ -5,8 +5,8 @@
 from random import randrange, randint
 
 RULES = 'Find the greatest common divisor of given numbers.'
-START = 1
-STOP = 100
+LOWER_BOUND = 1
+UPPER_BOUND_NUM = 100
 STEP = 1
 
 
@@ -23,9 +23,9 @@ def gcd(x, y):
 
 
 def complete_the_game():
-    number = randint(START + 1, STOP)
-    x = randrange(START, number, STEP)
-    y = randrange(START, number, STEP)
+    number = randint(LOWER_BOUND + 1, UPPER_BOUND_NUM)
+    x = randrange(LOWER_BOUND, number, STEP)
+    y = randrange(LOWER_BOUND, number, STEP)
     the_task = str(x) + ' ' + str(y)
     correct_answer = 1
     correct_answer = gcd(x, y)

@@ -5,10 +5,9 @@
 from random import randrange, randint
 
 RULES = 'What number is missing in the progression?'
-START = 1
-STOP1 = 5
-STOP2 = 100
-STOP3 = 10
+LOWER_BOUND = 1
+UPPER_BOUND_DELTA = 5
+UPPER_BOUND_NUM = 10
 STEP = 1
 
 
@@ -23,12 +22,12 @@ def go_to_string_progression(progression, indicator):
 
 
 def complete_the_game():
-    number_of_elements = 5 + randint(START, STOP3)
-    first_num = randrange(START, number_of_elements, STEP)
-    delta = abs(randrange(START, STOP1, STEP))
+    number_of_elements = 5 + randint(LOWER_BOUND, UPPER_BOUND_NUM)
+    first_num = randrange(LOWER_BOUND, number_of_elements, STEP)
+    delta = abs(randrange(LOWER_BOUND, UPPER_BOUND_DELTA, STEP))
     progression = create_progression(first_num, number_of_elements, delta)
-    long_progression = 5 + randrange(START, STOP1, STEP)
-    joker = randrange(START + 1, int(long_progression), STEP)
+    long_progression = 5 + randrange(LOWER_BOUND, UPPER_BOUND_DELTA, STEP)
+    joker = randrange(LOWER_BOUND + 1, int(long_progression), STEP)
     miss_num = progression[joker]
     correct_answer = str(miss_num)
     the_task = go_to_string_progression(progression, joker)

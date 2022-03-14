@@ -4,7 +4,7 @@
 
 from random import randrange
 
-RULES_OF_THE_GAME = 'Answer "yes" if given number is prime. Otherwise "no".'
+RULES = 'Answer "yes" if given number is prime. Otherwise "no".'
 START = 3
 STOP = 100
 STEP = 1

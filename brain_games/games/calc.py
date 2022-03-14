@@ -4,7 +4,7 @@
 
 from random import randint, randrange
 
-RULES_OF_THE_GAME = 'What is the result of the expression?'
+RULES = 'What is the result of the expression?'
 START = 1
 STOP1 = 4
 STOP2 = 100

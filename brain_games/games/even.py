@@ -3,7 +3,7 @@
 # BEGIN
 
 from random import randint
-RULES_OF_THE_GAME = 'Answer "yes" if the number is even, otherwise answer "no".'
+RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
 START = 1
 STOP = 100
 

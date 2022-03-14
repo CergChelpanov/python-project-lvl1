@@ -11,7 +11,7 @@ def run(game):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print('Hello, {}!'.format(name))
-    print(game.RULES_OF_THE_GAME)
+    print(game.RULES)
     i = REPEAT
     while i > 0:
         i = i - 1

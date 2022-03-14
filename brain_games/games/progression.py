@@ -4,7 +4,7 @@
 
 from random import randrange, randint
 
-RULES_OF_THE_GAME = 'What number is missing in the progression?'
+RULES = 'What number is missing in the progression?'
 START = 1
 STOP1 = 5
 STOP2 = 100

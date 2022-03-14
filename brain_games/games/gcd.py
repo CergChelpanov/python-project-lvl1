@@ -4,7 +4,7 @@
 
 from random import randrange, randint
 
-RULES_OF_THE_GAME = 'Find the greatest common divisor of given numbers.'
+RULES = 'Find the greatest common divisor of given numbers.'
 START = 1
 STOP = 100
 STEP = 1

@@ -2,7 +2,7 @@
 
 # BEGIN
 
-from random import randint, randrange
+from random import randint, randrange, choice
 
 RULES = 'What is the result of the expression?'
 LOWER_BOUND = 1
@@ -19,16 +19,30 @@ def game_game():
 # чисел принимает одно из трёх значений: 1, 2, 3 каждое из
 # которых соответсвенно выбирает в задании калькулятора один
 # из арифметических операторв: +, -, *.
-    ariphmetic = randrange(LOWER_BOUND, UPPER_BOUND_ARIPH, STEP)
-    if ariphmetic == 1:
+#    ariphmetic = randrange(LOWER_BOUND, UPPER_BOUND_ARIPH, STEP)
+#    if ariphmetic == 1:
+#        the_task = str(x) + ' + ' + str(y)
+#        correct_answer = str(x + y)
+#        return the_task, correct_answer
+#    if ariphmetic == 2:
+#        the_task = str(x) + ' - ' + str(y)
+#        correct_answer = str(x - y)
+#        return the_task, correct_answer
+#    if ariphmetic == 3:
+#        the_task = str(x) + ' * ' + str(y)
+#        correct_answer = str(x * y)
+#        return the_task, correct_answer
+# Наставник желает видеть такое решение:
+    ariphmetic = choice(['+', '-', '*'])
+    if ariphmetic == "+":
         the_task = str(x) + ' + ' + str(y)
         correct_answer = str(x + y)
         return the_task, correct_answer
-    if ariphmetic == 2:
+    if ariphmetic == "-":
         the_task = str(x) + ' - ' + str(y)
         correct_answer = str(x - y)
         return the_task, correct_answer
-    if ariphmetic == 3:
+    if ariphmetic == "*":
         the_task = str(x) + ' * ' + str(y)
         correct_answer = str(x * y)
         return the_task, correct_answer

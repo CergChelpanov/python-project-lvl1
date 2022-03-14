@@ -22,7 +22,7 @@ def gcd(x, y):
     return correct_answer
 
 
-def complete_the_game():
+def game_game():
     number = randint(LOWER_BOUND + 1, UPPER_BOUND_NUM)
     x = randrange(LOWER_BOUND, number, STEP)
     y = randrange(LOWER_BOUND, number, STEP)

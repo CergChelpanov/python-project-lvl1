@@ -21,7 +21,7 @@ def is_prime(number):
     return True
 
 
-def complete_the_game():
+def game_game():
     number = randrange(LOWER_BOUND, UPPER_BOUND_NUM, STEP)
     the_task = str(number)
     correct_answer = 'yes'

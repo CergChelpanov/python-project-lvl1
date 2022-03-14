@@ -21,7 +21,7 @@ def go_to_string_progression(progression, indicator):
                     for x in range(len(progression))])
 
 
-def complete_the_game():
+def game_game():
     number_of_elements = 5 + randint(LOWER_BOUND, UPPER_BOUND_NUM)
     initial_term = randrange(LOWER_BOUND, number_of_elements, STEP)
     difference = abs(randrange(LOWER_BOUND, UPPER_BOUND_DIFF, STEP))

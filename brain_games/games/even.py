@@ -12,7 +12,7 @@ def is_even(number):
     return number % 2 == 0
 
 
-def complete_the_game():
+def game_game():
     number = randint(LOWER_BOUND, UPPER_BOUND_NUM)
     the_task = str(number)
     if is_even(number) is True:

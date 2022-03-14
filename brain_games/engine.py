@@ -15,7 +15,7 @@ def run(game):
     i = REPEAT
     while i > 0:
         i = i - 1
-        the_task, correct_answer = game.complete_the_game()
+        the_task, correct_answer = game.game_game()
         print('Question:', the_task)
         answer = prompt.string('Your answer: ')
         if str(answer) != str(correct_answer):

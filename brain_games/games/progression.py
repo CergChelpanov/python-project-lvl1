@@ -27,10 +27,12 @@ def game_game():
     difference = abs(randrange(LOWER_BOUND, UPPER_BOUND_DIFF, STEP))
     progression = create_progression(initial_term, number_of_elements,
                                      difference)
-    joker = randrange(LOWER_BOUND + 1, len(progression), STEP)
-    miss_num = progression[joker]
+#    hidden_element_index = randrange(LOWER_BOUND + 1, len(progression), STEP)
+# Наставник желает видеть другой вариант:
+    hidden_element_index = randint(0, len(progression) - 1)
+    miss_num = progression[hidden_element_index]
     correct_answer = str(miss_num)
-    the_task = stringify_progression(progression, joker)
+    the_task = stringify_progression(progression, hidden_element_index)
     return the_task.strip(), correct_answer
 
 # END

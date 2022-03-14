@@ -8,12 +8,13 @@ START = 1
 STOP = 100
 
 
+def is_even(number):
+    return number % 2 == 0
+
+
 def complete_the_game():
     number = randint(START, STOP)
     the_task = str(number)
-
-    def is_even(number):
-        return number % 2 == 0
     if is_even(number) is True:
         correct_answer = 'yes'
         return the_task, correct_answer

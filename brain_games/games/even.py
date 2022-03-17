@@ -15,7 +15,7 @@ def is_even(number):
 def return_pair_question_corr_answer():
     number = randint(LOWER_BOUND, UPPER_BOUND_NUM)
     the_task = str(number)
-    if is_even(number) is True:
+    if is_even(number):
         correct_answer = 'yes'
     else:
         correct_answer = 'no'

@@ -24,7 +24,7 @@ def is_prime(number):
 def return_pair_question_corr_answer():
     number = randrange(LOWER_BOUND, UPPER_BOUND_NUM, STEP)
     the_task = str(number)
-    if is_prime(number) is True:
+    if is_prime(number):
         correct_answer = str('yes')
     else:
         correct_answer = 'no'

@@ -37,14 +37,12 @@ def return_pair_question_corr_answer():
     if ariphmetic == "+":
         the_task = str(x) + ' + ' + str(y)
         correct_answer = str(x + y)
-        return the_task, correct_answer
     if ariphmetic == "-":
         the_task = str(x) + ' - ' + str(y)
         correct_answer = str(x - y)
-        return the_task, correct_answer
     if ariphmetic == "*":
         the_task = str(x) + ' * ' + str(y)
         correct_answer = str(x * y)
-        return the_task, correct_answer
+    return the_task, correct_answer
 
 # END

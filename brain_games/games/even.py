@@ -17,9 +17,8 @@ def return_pair_question_corr_answer():
     the_task = str(number)
     if is_even(number) is True:
         correct_answer = 'yes'
-        return the_task, correct_answer
     else:
         correct_answer = 'no'
-        return the_task, correct_answer
+    return the_task, correct_answer
 
 # END

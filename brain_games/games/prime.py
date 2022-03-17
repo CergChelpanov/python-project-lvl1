@@ -26,7 +26,6 @@ def return_pair_question_corr_answer():
     the_task = str(number)
     if is_prime(number) is True:
         correct_answer = str('yes')
-        return the_task, correct_answer
     else:
         correct_answer = 'no'
     return the_task, correct_answer

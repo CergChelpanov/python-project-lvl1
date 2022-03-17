@@ -4,7 +4,7 @@
 
 import prompt
 
-REPEAT = 3
+ROUNDS_COUNT = 3
 
 
 def run(game):
@@ -12,7 +12,7 @@ def run(game):
     name = prompt.string('May I have your name? ')
     print('Hello, {}!'.format(name))
     print(game.RULES)
-    i = REPEAT
+    i = ROUNDS_COUNT
     while i > 0:
         i = i - 1
         the_task, correct_answer = game.game_game()

@@ -11,7 +11,7 @@ UPPER_BOUND_NUM = 100
 STEP = 1
 
 
-def game_game():
+def return_pair_question_corr_answer():
     number = randint(LOWER_BOUND + 1, UPPER_BOUND_NUM)
     x = randrange(LOWER_BOUND, number, STEP)
     y = randrange(LOWER_BOUND, number, STEP)

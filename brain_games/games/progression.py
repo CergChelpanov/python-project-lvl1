@@ -21,7 +21,7 @@ def stringify_progression(progression, hidden_element_index):
                     for x in range(len(progression))])
 
 
-def game_game():
+def return_pair_question_corr_answer():
     number_of_elements = 5 + randint(LOWER_BOUND, UPPER_BOUND_NUM)
     initial_term = randrange(LOWER_BOUND, number_of_elements, STEP)
     difference = abs(randrange(LOWER_BOUND, UPPER_BOUND_DIFF, STEP))

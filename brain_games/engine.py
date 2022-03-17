@@ -15,7 +15,7 @@ def run(game):
     i = ROUNDS_COUNT
     while i > 0:
         i = i - 1
-        the_task, correct_answer = game.game_game()
+        the_task, correct_answer = game.return_pair_question_corr_answer()
         print('Question:', the_task)
         answer = prompt.string('Your answer: ')
         if str(answer) != str(correct_answer):
